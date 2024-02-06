@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="front" id="card-front">
+                <div class="header-container">
+                    <h5 class="credit-card-text">Credit Card</h5>
+                    <img src="./icons/contactless-icon.svg" alt="Logo" class="contactless-logo">
+                </div>
+                <div class="chip-container">
+                    <img src="./icons/chip.png" alt="Logo" class="chip-logo">
+                </div>
+                <div class="card-details-container">
+                    <div class="card-number">
+                        <input id="input-number" type="tel" maxlength="19" minlength="19" placeholder="Card Number"
+                            required oninput="cardNumberFormat(this)"
+                            onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                    </div>
+                    <div class="expiration">
+                        <h6>VALID THRU</h6>
+
+                        <select name="month" id="input-month" onchange="checkSelection(this)">
+                            <option value="month" selected disabled>month</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select >
+
+                        <select name="year" id="input-year" onchange="checkSelection(this)">
+                            <option value="year" selected disabled>year</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                            <option value="2030">2030</option>
+                        </select>
+                    </div>
+                    <div class="holder">
+                        <input type="text" maxlength="100" id="input-holder" class="holder-name-input" required
+                            placeholder="Card Holder" oninput="holderNameFormat(this)" onblur="holderNameFormat(this)"
+                            title=" Please enter a valid first and last name" onkeypress="return (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122)
+                            || event.charCode === 32">
+                    </div>
+                </div>
+            </div>
+            <div class="back" id="card-back">
+                <div class="black-strip"></div>
+                <div class="cvv-container">
+                    <div class="gradient">
+                        <input id="input-cvv" type="tel" maxlength="3" minlength="3" placeholder="CVV"
+                            onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+                    </div>
+                </div>
+                <div class="description-container">
+                    <p class="description">This is a virtual card design built using Html, Css and JavaScript.</p>
+                    <h3 class="customer-signaure">CUSTOMER SIGNATURE</h3>
+                </div>
+            </div>
+            <div id="flip-button">
+                <img src="./icons/flip-icon.png" alt="Icon" class="button">
+            </div>
+        </div>
+        <button type="submit" id="submit-button">Submit</button>
+        <div id="alert"></div>
+    </div>
+    <script src="submit.js"></script>
+    <script src="alerts.js"></script>
+    <script src="cardAnimation.js"></script>
+</body>
+
+</html>

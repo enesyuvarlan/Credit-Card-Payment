@@ -1,0 +1,123 @@
+.back {
+    transform: rotateY(-180deg);
+
+    & .black-strip {
+        background-color: rgb(33, 32, 34);
+        margin-top: 35px;
+        height: 55px;
+        width: 512px;
+
+    }
+
+    & .cvv-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+
+        & .gradient {
+            position: relative;
+            height: 45px;
+            width: 400px;
+            margin-right: 50px;
+            background-color: rgba(211, 211, 211, 0.9);
+            background-image: var(--gradient-background);
+
+            &>input {
+                border: 0.4px solid rgb(0, 0, 0, 0.3);
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                color: #000000;
+
+                height: 33px;
+                width: 55px;
+                padding: 5px;
+                letter-spacing: 1px;
+                font-size: 20px;
+                font-weight: 600;
+                &:hover {
+                    border: 1.5px solid rgb(33, 32, 34, 1);
+                }
+            }
+
+            ::placeholder {
+                color: #000000;
+                opacity: 0.3;
+                font-weight: 500;
+            }
+        }
+    }
+
+    & .description-container {
+        height: 130px;
+        width: 450px;
+        margin-top: 20px;
+        margin-left: 40px;
+
+        &>p {
+            color: var(--text-color);
+            margin-top: 30px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        &>h3 {
+            color: var(--text-color);
+            margin-top: 50px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .back {
+        & .black-strip {
+            margin-top: 13px;
+            height: 30px;
+            width: 100%;
+        }
+
+        & .cvv-container {
+            margin-top: 10px;
+
+            & .gradient {
+                position: relative;
+                height: 25px;
+                width: 210px;
+                margin-right: 20px;
+
+                &>input {
+                    border: 0.2px solid rgb(0, 0, 0, 0.3);
+                    height: 18px;
+                    width: 37px;
+                    padding: 4px;
+                    letter-spacing: 1px;
+                    font-size: 12px;
+                    font-weight: 600;
+                    &:hover {
+                        border: 1px solid rgb(33, 32, 34, 1);
+                    }
+                }
+            }
+        }
+
+        & .description-container {
+            height: 60px;
+            width: 220px;
+            margin-top: 13px;
+            margin-left: 15px;
+
+            &>p {
+                margin-top: 5px;
+                font-size: 7px;
+            }
+
+            &>h3 {
+                margin-top: 20px;
+                font-size: 12px;
+            }
+        }
+    }
+}

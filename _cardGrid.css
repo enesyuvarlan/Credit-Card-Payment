@@ -1,0 +1,71 @@
+body {
+    background: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+
+    .container {
+        background-color: var(--container-background-color);
+        margin-top: 10px;
+        height: 800px;
+        width: 600px;
+        border-radius: 16px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        position: relative;
+
+        .card {
+            /* Classic Credit-Card size H:5.398cm / W:8.56cm */
+            /* (Size)*60px */
+            height: 324px;
+            width: 514px;
+            margin-top: 50px;
+            perspective: 1200px;
+            position: relative;
+
+            .front,
+            .back {
+                position: absolute;
+                backface-visibility: hidden;
+                transition: transform 0.8s ease-out;
+                height: inherit;
+                width: inherit;
+                border-radius: 16px;
+                border: var(--card-border);
+                background: rgba(0, 0, 0, 0.5);
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(1px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    /* Mobile */
+    body {
+        .container {
+            margin-top: 0px;
+            height: 500px;
+            width: 300px;
+            border-radius: 8px;
+
+            .card {
+                /* Classic Credit-Card size H:5.398cm / W:8.56cm */
+                /* (Size)*30px */
+                height: 162px;
+                width: 256px;
+                margin-top: 30px;
+
+                .front,
+                .back {
+                    width: inherit;
+                    border-radius: 8px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@import './_cardFront.css';
+@import './_cardBack.css';
+@import './_button.css';
+@import './_cardGrid.css';
+@import './_alert.css';
+@import './_fonts.css';
+@import './_reboot.css';
+
+:root {
+    /* COLORS*/
+    --text-color: #ffffff;
+    --background-color: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(195, 89, 184, 1) 50%, rgba(0, 212, 255, 0.9472163865546218) 100%);
+    /* Background Color Gradient */
+    --container-background-color: rgb(255, 255, 255, 0.1);
+    --input-background-color: transparent;
+
+    /* INPUT BORDER */
+    --input-border: 2px solid rgba(255, 255, 255, 0.5);
+    --input-border-hover:2px solid rgba(255, 255, 255, 1);
+    --mobile-input-border: 1px solid rgba(255, 255, 255, 0.5);
+    --mobile-input-border-hover: 1px solid rgba(255, 255, 255, 1);
+    --card-border: 1px solid rgba(255, 255, 255, 0.3);
+    --input-border-radius: 8px;
+    --mobile-border-radius: 4px;
+
+    /* OPACITY */
+    --expiration-opacity: 0.7;
+
+    /* GRADIENT */
+    --gradient-background: repeating-linear-gradient(135deg, transparent, transparent 5px, rgba(255, 255, 255, .8) 5px, rgb(243, 242, 243) 10px) ;
+}

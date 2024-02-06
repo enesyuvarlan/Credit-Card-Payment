@@ -1,0 +1,77 @@
+#flip-button {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    margin-top: 100px;
+    margin-right: -60px;
+
+    >img {
+        width: 100px;
+
+        &:hover {
+            cursor: pointer;
+            width: 120px;
+            transition: 200ms ease;
+        }
+    }
+}
+
+.container {
+
+    >button {
+        color: var(--text-color);
+        border: var(--input-border);
+        cursor: pointer;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        background-color: transparent;
+        border-radius: var(--input-border-radius);
+        position: absolute;
+        top: 50%;
+        right: auto;
+        left: auto;
+        height: 50px;
+        width: 200px;
+        font-size: 30px;
+        font-weight: 800;
+
+        &:hover {
+            background-color: #f0f0f0;
+            color: #333;
+            border-color: #999;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    #flip-button {
+        top: 0;
+        right: 0;
+        margin-top: 50px;
+        margin-right: -30px;
+
+        >img {
+            width: 50px;
+
+            &:hover {
+                cursor: pointer;
+                width: 60px;
+                transition: 200ms ease;
+            }
+        }
+    }
+
+    .container {
+
+        >button {
+            top: 50%;
+            margin-top: -35px;
+            height: 30px;
+            width: 120px;
+            font-size: 20px;
+            font-weight: 800;
+            border: var(--mobile-input-border);
+        }
+    }
+}
